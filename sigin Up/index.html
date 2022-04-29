@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+width:30%;
+margin:auto;
+font-weight: bold;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+padding:5px;
+        }
+        h1{
+            text-align: center;
+        }
+        input{
+            margin-top: 10px;
+            margin-bottom: 15px;
+            width:90%;
+            padding: 10px;
+        }
+       #btn{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+<h1>SIGN UP</h1>
+<lable>Mobile Number </lable><br/>
+<input id="phone" type="number" placeholder="Enter your phone Number"/><br/>
+
+<lable>Email </lable><br/>
+<input id="email" type="email" placeholder="Enter your Emaii"/><br/>
+
+<lable>Password</lable><br/>
+<input  id="password" type="password" placeholder="Enter your Name"/><br/>
+<input id="btn" type="submit" value="SignUp"/>
+
+    </form>
+    <button><a href="validation.html">LOGIN</a></a></button>
+    
+</body>
+</html>
+<script>
+document.querySelector("#form").addEventListener("submit",myfunc)
+
+function myfunc(){
+    event.preventDefault()
+var obj={
+    phone:form.phone.value,
+    email:form.email.value,
+    password:form.password.value
+
+}
+localStorage.setItem("validation",JSON.stringify(obj))
+alert("sign up successful please login")
+}
+</script>
